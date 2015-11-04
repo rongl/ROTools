@@ -12,36 +12,25 @@ import AppKit
 var sharedPlugin: ROTools?
 
 
-// 扩展String,使其支持NSString相关属性与方法
-extension String {
-    func stringByAppendingPathComponent(string:String) -> String{
-        return NSString(string: self).stringByAppendingPathComponent(string);
-    }
-    
-    var stringByDeletingLastPathComponent:String{
-        get{
-            return NSString(string: self).stringByDeletingLastPathComponent;
-        }
-    }
-    
-    var doubleValue:Double {
-        get{
-            return NSString(string: self).doubleValue
-        }
-    }
-}
 
 class ROTools: NSObject {
     var bundle: NSBundle
+    var iconImportwindow : IconImportWindowController!
     lazy var center = NSNotificationCenter.defaultCenter()
+    lazy var importType:NSArray?  = {
+        if let importTypePath = self.bundle.pathForResource("importType", ofType: "plist") {
+            return NSArray(contentsOfFile:importTypePath)
+        }
+        return nil
+    }()
 
+    
     init(bundle: NSBundle) {
         self.bundle = bundle
         super.init()
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.createMenuItems()
         })
-        // center.addObserver(self, selector: Selector("createMenuItems"), name: NSApplicationDidFinishLaunchingNotification, object: nil)
     }
 
     deinit {
@@ -76,9 +65,9 @@ class ROTools: NSObject {
             mainMenus.addItem(appIconMakerMenuItem)
             
             
-            let importIconsMenuItem = NSMenuItem(title:"Import Icons", action:"", keyEquivalent:"")
+            let importIconsMenuItem = NSMenuItem(title:"Import Icons", action:"importIconsAction", keyEquivalent:"")
             importIconsMenuItem.target = self
-            importIconsMenuItem.enabled = false
+            //importIconsMenuItem.enabled = false
             mainMenus.addItem(importIconsMenuItem)
             
             
@@ -94,7 +83,7 @@ class ROTools: NSObject {
     点击时响应
     */
     func appIconMakerAction() {
-        if let originalImageUrl = getOriginalImageUrl(), let workspacePath = getWorkspacePath(), let iconFolderPath = getIconFolderPath(workspacePath) {
+        if let originalImageUrl = getOriginalImageUrl(), let workspacePath = Bin.getWorkspacePath(), let iconFolderPath = getIconFolderPath(workspacePath) {
                 let originalImage = NSImage(contentsOfURL: originalImageUrl)
             
                 let iconJSONPath = iconFolderPath.stringByAppendingPathComponent("Contents.json")
@@ -104,7 +93,7 @@ class ROTools: NSObject {
             
                 for singleImage in jsonDict["images"] as! NSArray {
                     if let attributes = singleImage as? NSMutableDictionary,
-                        let resultName = resizeImage(originalImage!, attributes: attributes, savePath: iconFolderPath){
+                        let resultName = Bin.resizeImage(originalImage!, attributes: attributes, savePath: iconFolderPath){
                          attributes["filename"] = resultName
                     }
                     
@@ -120,47 +109,19 @@ class ROTools: NSObject {
         }
     }
     
-    /**
-    图片按指定Size缩小,保存到对指定的目录下.并根据Json的参数命名
-    
-    - parameter img:        源图片
-    - parameter attributes: Json数据,用于指定图片Size与命名
-    - parameter savePath:   目录保存目录
-    
-    - returns: <#return value description#>
-    */
-    func resizeImage(img:NSImage, attributes: NSMutableDictionary, savePath: NSString) -> NSString?{
-        if let size = attributes["size"] as? String,
-            let sizeUnit = size.componentsSeparatedByString("x").first?.doubleValue,
-            let scale = attributes["scale"] as? String,
-            let scaleUnit = scale.componentsSeparatedByString("x").first?.doubleValue,
-            let idiom = attributes["idiom"] as? String{
-                
-                let realSize = sizeUnit * scaleUnit
-
-                var imgName = "Icon-\(idiom)-\(size).png"
-                if scaleUnit != 1.0 {
-                    imgName = "Icon-\(idiom)-\(size)@\(scale).png"
-                }
-                
-                guard let bitMap = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: Int(realSize), pixelsHigh: Int(realSize), bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true, isPlanar: false, colorSpaceName: NSCalibratedRGBColorSpace, bytesPerRow: 0, bitsPerPixel: 0) else{
-                    return nil;
-                    
-                }
-                NSGraphicsContext.saveGraphicsState()
-                NSGraphicsContext.setCurrentContext(NSGraphicsContext(bitmapImageRep: bitMap))
-                img.drawInRect(NSRect(x: 0, y: 0, width: realSize, height: realSize), fromRect: NSZeroRect, operation: .CompositeCopy, fraction: 1.0)
-                NSGraphicsContext.restoreGraphicsState()
-                
-                if let data = bitMap.representationUsingType(.NSPNGFileType, properties: NSDictionary() as! [String : AnyObject]) {
-                    if data.writeToFile(savePath.stringByAppendingPathComponent(imgName) as String, atomically: true) {
-                        return imgName
-                    }
-                }
+    func importIconsAction(){
+        if self.iconImportwindow == nil {
+            self.iconImportwindow = IconImportWindowController(windowNibName: "IconImportWindowController")
+        }
+        if self.importType != nil,
+            let assetsPath = Bin.getAssetsPath() {
+            self.iconImportwindow.assetsPath = assetsPath
+            self.iconImportwindow.importType  = self.importType!
+            self.iconImportwindow.showWindow(self.iconImportwindow)
         }
         
-        return nil
     }
+    
     
     
     /**
@@ -197,36 +158,14 @@ class ROTools: NSObject {
         return nil
     }
     
-    /**
-    返回项目目录路径
-    */
-    func getWorkspacePath() -> NSString? {
-        var workspace: AnyObject? = nil
-        if let c = (NSClassFromString("IDEWorkspaceWindowController") as? AnyObject)?.valueForKey("workspaceWindowControllers") as? NSArray {
-            for controller in c {
-                print(controller);
-                let window: AnyObject? = controller.valueForKey("window")
-                let keyWindow = NSApp.keyWindow
-                if let w: AnyObject = window, let kw: AnyObject = keyWindow as? AnyObject {
-                    if true == w.isEqual(kw) {
-                        workspace = controller.valueForKey("_workspace")
-                        break
-                    }
-                }
-            }
-            if let workspacePath = workspace?.valueForKey("representingFilePath")?.valueForKey("_pathString") as? NSString {
-               return workspacePath.stringByDeletingLastPathComponent
-            }
-        }
-        return nil
-    }
+    
     
     /**
     错误提示,用于测试.
     
-    - parameter string: <#string description#>
+    - parameter string: string description
     */
-    func showError(string:String="") {
+    func showError(string:String?) {
         let error = NSError(domain: "Something went wrong[\(string)] :(", code:0, userInfo:nil)
         NSAlert(error: error).runModal()
     }
@@ -247,7 +186,6 @@ class ROTools: NSObject {
         
         let result = openPanel.runModal()
         if (NSFileHandlingPanelOKButton == result) {
-            print(openPanel.URL)
             return  openPanel.URL
         }
         return nil

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Custom icon/image</key>
+	<dict>
+		<key>unit</key>
+		<dict>
+			<key>ipad</key>
+			<integer>0</integer>
+			<key>iphone</key>
+			<integer>0</integer>
+			<key>universeal</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>Tab bar icon</key>
+	<dict>
+		<key>unit</key>
+		<dict>
+			<key>ipad</key>
+			<integer>25</integer>
+			<key>iphone</key>
+			<integer>25</integer>
+			<key>universeal</key>
+			<integer>25</integer>
+		</dict>
+	</dict>
+	<key>Toolbar and navigation bar icon</key>
+	<dict>
+		<key>unit</key>
+		<dict>
+			<key>ipad</key>
+			<integer>22</integer>
+			<key>iphone</key>
+			<integer>22</integer>
+			<key>universeal</key>
+			<integer>22</integer>
+		</dict>
+	</dict>
+	<key>Web clip icon</key>
+	<dict>
+		<key>unit</key>
+		<dict>
+			<key>ipad</key>
+			<integer>76</integer>
+			<key>iphone</key>
+			<integer>60</integer>
+			<key>universeal</key>
+			<integer>60</integer>
+		</dict>
+	</dict>
+</dict>
+</plist>

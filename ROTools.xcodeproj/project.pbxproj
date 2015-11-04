@@ -7,18 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		570CEEB41BB2515400C4A08E /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CEEB31BB2515400C4A08E /* extension.swift */; settings = {ASSET_TAGS = (); }; };
+		5741C5381BB535CB00CF2208 /* Picture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5741C5361BB535CB00CF2208 /* Picture@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5741C53E1BB535EB00CF2208 /* Refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5741C53A1BB535EB00CF2208 /* Refresh@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5741C53F1BB535EB00CF2208 /* Accept@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5741C53B1BB535EB00CF2208 /* Accept@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5741C5401BB535EB00CF2208 /* Discard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5741C53C1BB535EB00CF2208 /* Discard@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5741C5411BB535EB00CF2208 /* Shuffle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5741C53D1BB535EB00CF2208 /* Shuffle@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5741C5471BB535FB00CF2208 /* Picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 5741C5421BB535FB00CF2208 /* Picture.png */; settings = {ASSET_TAGS = (); }; };
+		5741C5481BB535FB00CF2208 /* Discard.png in Resources */ = {isa = PBXBuildFile; fileRef = 5741C5431BB535FB00CF2208 /* Discard.png */; settings = {ASSET_TAGS = (); }; };
+		5741C5491BB535FB00CF2208 /* Accept.png in Resources */ = {isa = PBXBuildFile; fileRef = 5741C5441BB535FB00CF2208 /* Accept.png */; settings = {ASSET_TAGS = (); }; };
+		5741C54A1BB535FB00CF2208 /* Refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 5741C5451BB535FB00CF2208 /* Refresh.png */; settings = {ASSET_TAGS = (); }; };
+		5741C54B1BB535FB00CF2208 /* Shuffle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5741C5461BB535FB00CF2208 /* Shuffle.png */; settings = {ASSET_TAGS = (); }; };
 		577738771BAA82E900157CCC /* ROTools.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 577738761BAA82E900157CCC /* ROTools.xcscheme */; };
 		577738791BAA82E900157CCC /* ROTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577738781BAA82E900157CCC /* ROTools.swift */; };
 		5777387B1BAA82E900157CCC /* NSObject_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5777387A1BAA82E900157CCC /* NSObject_Extension.swift */; };
+		578E22FD1BB2480F00C7DA44 /* iItemTableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E22FC1BB2480F00C7DA44 /* iItemTableRowView.swift */; settings = {ASSET_TAGS = (); }; };
+		578E22FF1BB2483700C7DA44 /* iItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E22FE1BB2483700C7DA44 /* iItem.swift */; settings = {ASSET_TAGS = (); }; };
+		57CC33F51BCB697D00C9D771 /* Bin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CC33F41BCB697D00C9D771 /* Bin.swift */; settings = {ASSET_TAGS = (); }; };
+		57E3CAEE1BAB2C1D006FEAA3 /* IconImportWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3CAEC1BAB2C1D006FEAA3 /* IconImportWindowController.swift */; settings = {ASSET_TAGS = (); }; };
+		57E3CAEF1BAB2C1D006FEAA3 /* IconImportWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E3CAED1BAB2C1D006FEAA3 /* IconImportWindowController.xib */; settings = {ASSET_TAGS = (); }; };
+		57FE8CC31BAFC28D000F2D09 /* importType.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57FE8CC21BAFC28D000F2D09 /* importType.plist */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		570CEEB31BB2515400C4A08E /* extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = extension.swift; path = ../extension.swift; sourceTree = "<group>"; };
+		5741C5361BB535CB00CF2208 /* Picture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Picture@2x.png"; sourceTree = "<group>"; };
+		5741C53A1BB535EB00CF2208 /* Refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Refresh@2x.png"; sourceTree = "<group>"; };
+		5741C53B1BB535EB00CF2208 /* Accept@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Accept@2x.png"; sourceTree = "<group>"; };
+		5741C53C1BB535EB00CF2208 /* Discard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Discard@2x.png"; sourceTree = "<group>"; };
+		5741C53D1BB535EB00CF2208 /* Shuffle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shuffle@2x.png"; sourceTree = "<group>"; };
+		5741C5421BB535FB00CF2208 /* Picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Picture.png; sourceTree = "<group>"; };
+		5741C5431BB535FB00CF2208 /* Discard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Discard.png; sourceTree = "<group>"; };
+		5741C5441BB535FB00CF2208 /* Accept.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Accept.png; sourceTree = "<group>"; };
+		5741C5451BB535FB00CF2208 /* Refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Refresh.png; sourceTree = "<group>"; };
+		5741C5461BB535FB00CF2208 /* Shuffle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shuffle.png; sourceTree = "<group>"; };
 		577738721BAA82E900157CCC /* ROTools.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ROTools.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		577738761BAA82E900157CCC /* ROTools.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = ROTools.xcscheme; path = ROTools.xcodeproj/xcshareddata/xcschemes/ROTools.xcscheme; sourceTree = SOURCE_ROOT; };
 		577738781BAA82E900157CCC /* ROTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROTools.swift; sourceTree = "<group>"; };
 		5777387A1BAA82E900157CCC /* NSObject_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject_Extension.swift; sourceTree = "<group>"; };
 		5777387C1BAA82E900157CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		579C535F1BAA90BF00F8A829 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		578E22FC1BB2480F00C7DA44 /* iItemTableRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iItemTableRowView.swift; sourceTree = "<group>"; };
+		578E22FE1BB2483700C7DA44 /* iItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iItem.swift; sourceTree = "<group>"; };
+		57CC33F41BCB697D00C9D771 /* Bin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bin.swift; sourceTree = "<group>"; };
+		57E3CAEC1BAB2C1D006FEAA3 /* IconImportWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconImportWindowController.swift; sourceTree = "<group>"; };
+		57E3CAED1BAB2C1D006FEAA3 /* IconImportWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconImportWindowController.xib; sourceTree = "<group>"; };
+		57FE8CC21BAFC28D000F2D09 /* importType.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = importType.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -41,9 +74,12 @@
 		577738741BAA82E900157CCC /* ROTools */ = {
 			isa = PBXGroup;
 			children = (
+				578E22F91BB247BB00C7DA44 /* importItem */,
 				577738781BAA82E900157CCC /* ROTools.swift */,
-				579C535F1BAA90BF00F8A829 /* MyPlayground.playground */,
+				57CC33F31BCB696800C9D771 /* Common */,
 				5777387A1BAA82E900157CCC /* NSObject_Extension.swift */,
+				57E3CAEC1BAB2C1D006FEAA3 /* IconImportWindowController.swift */,
+				57E3CAED1BAB2C1D006FEAA3 /* IconImportWindowController.xib */,
 				5777387C1BAA82E900157CCC /* Info.plist */,
 				577738751BAA82E900157CCC /* Supporting Files */,
 			);
@@ -53,9 +89,38 @@
 		577738751BAA82E900157CCC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				57FE8CC21BAFC28D000F2D09 /* importType.plist */,
+				5741C5361BB535CB00CF2208 /* Picture@2x.png */,
+				5741C53A1BB535EB00CF2208 /* Refresh@2x.png */,
+				5741C5421BB535FB00CF2208 /* Picture.png */,
+				5741C5431BB535FB00CF2208 /* Discard.png */,
+				5741C5441BB535FB00CF2208 /* Accept.png */,
+				5741C5451BB535FB00CF2208 /* Refresh.png */,
+				5741C5461BB535FB00CF2208 /* Shuffle.png */,
+				5741C53B1BB535EB00CF2208 /* Accept@2x.png */,
+				5741C53C1BB535EB00CF2208 /* Discard@2x.png */,
+				5741C53D1BB535EB00CF2208 /* Shuffle@2x.png */,
 				577738761BAA82E900157CCC /* ROTools.xcscheme */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		578E22F91BB247BB00C7DA44 /* importItem */ = {
+			isa = PBXGroup;
+			children = (
+				578E22FC1BB2480F00C7DA44 /* iItemTableRowView.swift */,
+				578E22FE1BB2483700C7DA44 /* iItem.swift */,
+			);
+			path = importItem;
+			sourceTree = "<group>";
+		};
+		57CC33F31BCB696800C9D771 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				570CEEB31BB2515400C4A08E /* extension.swift */,
+				57CC33F41BCB697D00C9D771 /* Bin.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,7 +180,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5741C5411BB535EB00CF2208 /* Shuffle@2x.png in Resources */,
+				57FE8CC31BAFC28D000F2D09 /* importType.plist in Resources */,
 				577738771BAA82E900157CCC /* ROTools.xcscheme in Resources */,
+				57E3CAEF1BAB2C1D006FEAA3 /* IconImportWindowController.xib in Resources */,
+				5741C53E1BB535EB00CF2208 /* Refresh@2x.png in Resources */,
+				5741C53F1BB535EB00CF2208 /* Accept@2x.png in Resources */,
+				5741C5401BB535EB00CF2208 /* Discard@2x.png in Resources */,
+				5741C5381BB535CB00CF2208 /* Picture@2x.png in Resources */,
+				5741C54B1BB535FB00CF2208 /* Shuffle.png in Resources */,
+				5741C5481BB535FB00CF2208 /* Discard.png in Resources */,
+				5741C54A1BB535FB00CF2208 /* Refresh.png in Resources */,
+				5741C5471BB535FB00CF2208 /* Picture.png in Resources */,
+				5741C5491BB535FB00CF2208 /* Accept.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +204,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				577738791BAA82E900157CCC /* ROTools.swift in Sources */,
+				570CEEB41BB2515400C4A08E /* extension.swift in Sources */,
+				578E22FD1BB2480F00C7DA44 /* iItemTableRowView.swift in Sources */,
+				578E22FF1BB2483700C7DA44 /* iItem.swift in Sources */,
 				5777387B1BAA82E900157CCC /* NSObject_Extension.swift in Sources */,
+				57E3CAEE1BAB2C1D006FEAA3 /* IconImportWindowController.swift in Sources */,
+				57CC33F51BCB697D00C9D771 /* Bin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
