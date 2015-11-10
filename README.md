@@ -5,7 +5,7 @@
 #### 三个主要功能:
 
 1. 一图完成AppIcon,主要参考了[IconMaker](https://github.com/kaphacius/IconMaker).
-2. 批量导入icon并自动resize `准备编写...`
+2. 批量导入icon并自动resize `基本功能已实现,但有BUG,迟点再处理...`
 3. 创建目录框架(New Group),并体现在物理目录下 `准备编写...`
 
 ### 安装 `ROTools` ###
@@ -16,7 +16,7 @@
 ### 图解 ###
 -----------------------
 
-![](http://7xkv1n.com1.z0.glb.clouddn.com/use.gif)
+
 ![](https://raw.githubusercontent.com/rongl/ROTools/master/use.gif)
 
 #### 其它说明 ####
@@ -24,5 +24,4 @@
 本人是初学阶段....
 
 
-new Group
-pip install xUnique
+
