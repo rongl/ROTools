@@ -18,6 +18,7 @@
 
 
 ![](https://raw.githubusercontent.com/rongl/ROTools/master/use.gif)
+![](https://raw.githubusercontent.com/rongl/ROTools/master/2.gif)
 
 #### 其它说明 ####
 -----------------------
