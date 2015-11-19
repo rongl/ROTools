@@ -1,60 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Rotools by rongl</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
     <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+    <title>Rotools by rongl</title>
   </head>
+
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/rongl/ROTools">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/rongl/ROTools/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/rongl/ROTools/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
+    <header>
+      <div class="inner">
+        <h1>Rotools</h1>
+        <h2>ROTools For Xcode 7 Plugin ( AppIcon Maker, Import Icons, New Group )</h2>
+        <a href="https://github.com/rongl/ROTools" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
 
-    <div class="wrapper">
-
-      <section>
-        <div id="title">
-          <h1>Rotools</h1>
-          <p>ROTools For Xcode 7 Plugin ( AppIcon Maker, Import Icons, New Group )</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/rongl">rongl</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
-
-        <h1>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
 <a id="rotools" class="anchor" href="#rotools" aria-hidden="true"><span class="octicon octicon-link"></span></a>ROTools</h1>
 
 <h1></h1>
 
-<p><code>ROTools</code>是在Xcode7正式版,OSX10.10.5下开发; 所以支持Xcode7正式版</p>
+<p><code>ROTools</code>是在Xcode7正式版,OSX10.10.5下开发; 所以支持Xcode7+</p>
 
 <h4>
 <a id="三个主要功能" class="anchor" href="#%E4%B8%89%E4%B8%AA%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD" aria-hidden="true"><span class="octicon octicon-link"></span></a>三个主要功能:</h4>
 
 <ol>
 <li>一图完成AppIcon,主要参考了<a href="https://github.com/kaphacius/IconMaker">IconMaker</a>.</li>
-<li>批量导入icon并自动resize <code>准备编写...</code>
+<li>批量导入icon并自动resize <code>基本功能已实现,但有BUG,迟点再处理...</code>
 </li>
-<li>创建目录框架(New Group),并体现在物理目录下 <code>准备编写...</code>
+<li>优化目录结构,使用xcode看到目录结构与物理目录结构一样 <code>基本功能已实现,但需要增加设置(自定义过滤的目录或者文件,暂时默认是过滤:"*xcassets","Products*","Pods*","Frameworks*")</code>
 </li>
 </ol>
+
+<h4>
+<a id="计划" class="anchor" href="#%E8%AE%A1%E5%88%92" aria-hidden="true"><span class="octicon octicon-link"></span></a>计划</h4>
+
+<p>用户交互优化,内存释放...都是一下步计划处理的.如果大家有什么好的建议欢迎交流...</p>
 
 <h3>
 <a id="安装-rotools" class="anchor" href="#%E5%AE%89%E8%A3%85-rotools" aria-hidden="true"><span class="octicon octicon-link"></span></a>安装 <code>ROTools</code>
@@ -65,18 +60,13 @@
 <p>通过<code>Alcatraz</code>插件管理器安装.</p>
 
 <h3>
-<a id="图解" class="anchor" href="#%E5%9B%BE%E8%A7%A3" aria-hidden="true"><span class="octicon octicon-link"></span></a>图解</h3>
+<a id="图解请耐心加载" class="anchor" href="#%E5%9B%BE%E8%A7%A3%E8%AF%B7%E8%80%90%E5%BF%83%E5%8A%A0%E8%BD%BD" aria-hidden="true"><span class="octicon octicon-link"></span></a>图解(请耐心加载)</h3>
 
 <hr>
 
-<p><img src="http://7xkv1n.com1.z0.glb.clouddn.com/use.gif" alt="">
-<img src="https://raw.githubusercontent.com/rongl/ROTools/master/use.gif" alt=""></p>
-
-<p>如果看不到图片,请自助查看:</p>
-
-<p><a href="https://raw.githubusercontent.com/rongl/ROTools/master/use.gif">https://raw.githubusercontent.com/rongl/ROTools/master/use.gif</a>
-或者
-<a href="http://7xkv1n.com1.z0.glb.clouddn.com/use.gif">http://7xkv1n.com1.z0.glb.clouddn.com/use.gif</a></p>
+<p><img src="https://raw.githubusercontent.com/rongl/ROTools/master/use.gif" alt="">
+<img src="https://raw.githubusercontent.com/rongl/ROTools/master/2.gif" alt="">
+<img src="https://raw.githubusercontent.com/rongl/ROTools/master/3.gif" alt=""></p>
 
 <h4>
 <a id="其它说明" class="anchor" href="#%E5%85%B6%E5%AE%83%E8%AF%B4%E6%98%8E" aria-hidden="true"><span class="octicon octicon-link"></span></a>其它说明</h4>
@@ -84,10 +74,25 @@
 <hr>
 
 <p>本人是初学阶段....</p>
-      </section>
+        </section>
 
+        <aside id="sidebar">
+          <a href="https://github.com/rongl/ROTools/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/rongl/ROTools/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/rongl/ROTools"></a> is maintained by <a href="https://github.com/rongl">rongl</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+
+  
   </body>
 </html>
