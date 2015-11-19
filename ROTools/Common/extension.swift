@@ -28,6 +28,15 @@ extension String {
             return NSString(string: self).doubleValue
         }
     }
+    var trim:String {
+        get {
+            return self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        }
+    }
+    
+    func replace(string:String,withString:String="") -> String {
+        return self.stringByReplacingOccurrencesOfString(string, withString: withString, options: NSStringCompareOptions.LiteralSearch, range: nil)
+    }
 }
 
 extension NSTextField {

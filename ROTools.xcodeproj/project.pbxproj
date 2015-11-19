@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		570CEEB41BB2515400C4A08E /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CEEB31BB2515400C4A08E /* extension.swift */; };
+		572D58BD1BF5D7B600EEA5A7 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572D58BB1BF5D7B600EEA5A7 /* extension.swift */; };
+		572D58C21BF5DBAB00EEA5A7 /* re.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572D58C11BF5DBAB00EEA5A7 /* re.swift */; };
 		5741C5381BB535CB00CF2208 /* Picture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5741C5361BB535CB00CF2208 /* Picture@2x.png */; };
 		5741C53E1BB535EB00CF2208 /* Refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5741C53A1BB535EB00CF2208 /* Refresh@2x.png */; };
 		5741C53F1BB535EB00CF2208 /* Accept@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5741C53B1BB535EB00CF2208 /* Accept@2x.png */; };
@@ -30,7 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		570CEEB31BB2515400C4A08E /* extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = extension.swift; path = ../extension.swift; sourceTree = "<group>"; };
+		572D58BB1BF5D7B600EEA5A7 /* extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		572D58C11BF5DBAB00EEA5A7 /* re.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = re.swift; sourceTree = "<group>"; };
 		5741C5361BB535CB00CF2208 /* Picture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Picture@2x.png"; sourceTree = "<group>"; };
 		5741C53A1BB535EB00CF2208 /* Refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Refresh@2x.png"; sourceTree = "<group>"; };
 		5741C53B1BB535EB00CF2208 /* Accept@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Accept@2x.png"; sourceTree = "<group>"; };
@@ -74,9 +76,9 @@
 		577738741BAA82E900157CCC /* ROTools */ = {
 			isa = PBXGroup;
 			children = (
+				57CC33F31BCB696800C9D771 /* Common */,
 				578E22F91BB247BB00C7DA44 /* importItem */,
 				577738781BAA82E900157CCC /* ROTools.swift */,
-				57CC33F31BCB696800C9D771 /* Common */,
 				5777387A1BAA82E900157CCC /* NSObject_Extension.swift */,
 				57E3CAEC1BAB2C1D006FEAA3 /* IconImportWindowController.swift */,
 				57E3CAED1BAB2C1D006FEAA3 /* IconImportWindowController.xib */,
@@ -117,8 +119,9 @@
 		57CC33F31BCB696800C9D771 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				570CEEB31BB2515400C4A08E /* extension.swift */,
 				57CC33F41BCB697D00C9D771 /* Bin.swift */,
+				572D58BB1BF5D7B600EEA5A7 /* extension.swift */,
+				572D58C11BF5DBAB00EEA5A7 /* re.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -204,7 +207,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				577738791BAA82E900157CCC /* ROTools.swift in Sources */,
-				570CEEB41BB2515400C4A08E /* extension.swift in Sources */,
+				572D58BD1BF5D7B600EEA5A7 /* extension.swift in Sources */,
+				572D58C21BF5DBAB00EEA5A7 /* re.swift in Sources */,
 				578E22FD1BB2480F00C7DA44 /* iItemTableRowView.swift in Sources */,
 				578E22FF1BB2483700C7DA44 /* iItem.swift in Sources */,
 				5777387B1BAA82E900157CCC /* NSObject_Extension.swift in Sources */,
