@@ -100,7 +100,7 @@ class ROTools: NSObject {
     */
     func createMenuItems() {
         removeObserver()
-        if let xCodeEdititem = NSApp.mainMenu!.itemWithTitle("Xcode") {
+        if let xCodeEdititem = NSApp.mainMenu!.itemWithTitle("Edit") {
             xCodeEdititem.submenu!.addItem(NSMenuItem.separatorItem())
             
             let menuItemRoot = NSMenuItem();
